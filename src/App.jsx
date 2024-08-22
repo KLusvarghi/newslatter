@@ -8,11 +8,12 @@ const App = () => {
   const hasUser = Boolean(user);
 
   return (
-    <>
+    // h-screen é igual colcoar heigh = 100vh
+    <div className='h-screen'>
       <Header user={user?.name} />
       {hasUser && <ArticleList />}
       {hasUser || <Form onSubmit={setUser} />}
-    </>
+    </div>
   );
 };
 
